@@ -1,0 +1,337 @@
+/* Combining Ethan's High-Impact Typography with Oppa's Vibrant Layout/Colors */
+:root {
+    --primary: #a855f7; /* Vibrant Purple/Violet from Oppa */
+    --primary-glow: rgba(168, 85, 247, 0.4);
+    --dark-bg: #0b1120; /* Deep Indigo Navy */
+    --light-bg: #f5f8ff; /* Soft light blue/lavender */
+    --surface: #ffffff;
+    --text-main: #0f172a;
+    --text-muted: #64748b;
+    --white: #ffffff;
+    --shadow-soft: 0 10px 40px -10px rgba(0, 0, 0, 0.05);
+    --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Syne', sans-serif;
+    color: var(--text-main);
+    background-color: var(--light-bg);
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .title-font {
+    font-family: 'Big Shoulders Display', sans-serif;
+    text-transform: uppercase;
+    line-height: 0.9;
+}
+
+/* Background Glowing Orbs (Oppa Style) */
+.orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    z-index: 1;
+    opacity: 0.5;
+}
+
+.orb-purple { width: 400px; height: 400px; background: var(--primary); }
+.orb-yellow { width: 300px; height: 300px; background: #fbbf24; }
+
+/* Navigation (Glassmorphism from before but refined) */
+header {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+}
+
+.logo {
+    color: var(--white);
+    font-weight: 800;
+    font-family: 'Syne', sans-serif;
+    font-size: 1.5rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+.nav-cta {
+    background: var(--primary);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 10px 20px var(--primary-glow);
+}
+
+/* Hero Section (Oppa Style) */
+.hero-oppa {
+    background: var(--dark-bg);
+    min-height: 100vh;
+    padding-top: 15vh;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.hero-oppa .hero-content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-oppa h1 {
+    font-size: clamp(4rem, 8vw, 10rem);
+    margin-bottom: 20px;
+}
+
+.hero-oppa p {
+    font-family: 'Syne', sans-serif;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.1rem;
+    max-width: 500px;
+    margin-bottom: 40px;
+}
+
+.hero-portrait-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.portrait-glitch-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: 2px solid var(--primary);
+    border-radius: 50%;
+    opacity: 0.2;
+    z-index: 1;
+    animation: pulse-ring 4s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+}
+
+@keyframes pulse-ring {
+    0% { transform: scale(0.8); opacity: 0.5; }
+    100% { transform: scale(1.2); opacity: 0; }
+}
+
+.hero-portrait-wrapper img {
+    position: relative;
+    max-width: 110%;
+    z-index: 5;
+    mask-image: linear-gradient(to top, transparent 2%, black 15%);
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Dynamic Orbiting Tags */
+.tech-tag {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 10px 20px;
+    border-radius: 50px;
+    color: white;
+    font-family: 'Syne';
+    font-size: 0.8rem;
+    font-weight: 700;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    animation: float 6s ease-in-out infinite alternate;
+}
+
+.tech-tag.tag-1 { top: 20%; right: -20px; animation-delay: 0.5s; }
+.tech-tag.tag-2 { bottom: 30%; left: -30px; animation-delay: 2s; }
+.tech-tag.tag-3 { top: 50%; left: -50px; animation-delay: 1.2s; }
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-30px); }
+}
+
+/* Stats (White background strip) */
+.stats-strip {
+    background: white;
+    padding: 60px 0;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    position: relative;
+    z-index: 10;
+}
+
+.stat-item { text-align: center; }
+.stat-item h3 { font-size: 3rem; color: var(--dark-bg); }
+.stat-item p { font-size: 0.9rem; color: var(--text-muted); font-family: 'Syne'; font-weight: 600; }
+
+/* Expertise Section (Oppa Cards) */
+.expertise-section { padding: 150px 0; }
+.expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.expertise-card-oppa {
+    background: white;
+    padding: 40px;
+    border-radius: 30px;
+    transition: var(--transition);
+    box-shadow: var(--shadow-soft);
+}
+
+.expertise-card-oppa:hover {
+    transform: translateY(-10px);
+}
+
+.icon-box {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.icon-box i { color: white; }
+
+/* Skills Progress Bars (Oppa style) */
+.skills-oppa-container {
+    background: var(--dark-bg);
+    color: white;
+    padding: 100px 5%;
+    border-radius: 60px;
+    margin: 50px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.skill-bar-wrapper { margin-bottom: 30px; }
+.skill-label { display: flex; justify-content: space-between; margin-bottom: 15px; font-weight: 700; font-family: 'Syne'; font-size: 0.9rem; }
+.progress-bg { height: 10px; background: rgba(255, 255, 255, 0.1); border-radius: 10px; overflow: hidden; }
+.progress-fill { height: 100%; background: var(--primary); box-shadow: 0 0 15px var(--primary-glow); border-radius: 10px; transition: width 1s ease; }
+
+/* Projects (Clean Card style) */
+.project-card-oppa {
+    background: white;
+    border-radius: 40px;
+    overflow: hidden;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    gap: 40px;
+    box-shadow: var(--shadow-soft);
+}
+
+.project-img-box {
+    width: 50%;
+    border-radius: 30px;
+    overflow: hidden;
+    height: 350px;
+}
+
+.project-img-box img { width: 100%; height: 100%; object-fit: cover; }
+
+.project-info-box { width: 50%; }
+.project-info-box h3 { font-size: 2.5rem; margin-bottom: 20px; }
+
+/* CTA Contact Container (Oppa style Card) */
+.cta-oppa {
+    background: var(--dark-bg);
+    border-radius: 60px;
+    padding: 80px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 100px;
+}
+
+.cta-oppa .orb { position: absolute; top: -50%; left: -20%; }
+
+/* Footer */
+footer.oppa-footer {
+    background: var(--dark-bg);
+    padding: 100px 0 50px;
+    color: white;
+    text-align: center;
+}
+
+.container {
+    max-width: 1400px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+    .hero-oppa .hero-content-grid { grid-template-columns: 1fr; text-align: center; }
+    .hero-portrait-wrapper { display: none; }
+    .skills-grid { grid-template-columns: 1fr; }
+    .project-card-oppa { flex-direction: column; padding: 20px; }
+    .project-img-box, .project-info-box { width: 100%; }
+}
+
+.blueprint-bg {
+    background-color: #0f172a;
+    background-image: 
+        linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px);
+    background-size: 20px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.blueprint-bg::after {
+    content: "DÉTAIL TECHNIQUE (PDF)";
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 0.8rem;
+    color: var(--primary);
+    opacity: 0.5;
+    font-weight: 800;
+}

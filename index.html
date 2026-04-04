@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chick POENOU | Ingénieur de Conception Génie Civil</title>
+
+    <!-- Google Fonts: Syne & Big Shoulders Display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Syne:wght@400..800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="nav-inner">
+            <a href="#" class="logo">CP.ING</a>
+            <nav class="nav-links">
+                <a href="#about">À Propos</a>
+                <a href="#services">Services</a>
+                <a href="#skills">Compétences</a>
+                <a href="#projects">Projets</a>
+            </nav>
+            <a href="#contact" class="nav-cta">Me Contacter</a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION (Ethan + Oppa Mix) -->
+    <section class="hero-oppa">
+        <div class="orb orb-purple" style="top: -100px; left: -100px;"></div>
+        <div class="orb orb-yellow" style="bottom: -50px; right: 10%;"></div>
+
+        <div class="container hero-content-grid">
+            <div class="hero-text">
+                <p style="text-transform: uppercase; letter-spacing: 2px; color: var(--primary); font-weight: 800;">
+                    Bonjour, Je suis</p>
+                <h1 class="title-font">CHICK <br> POENOU</h1>
+                <p>Ingénieur de conception en génie civil spécialisé dans le dimensionnement structurel et l'innovation
+                    BIM.</p>
+                <div style="display: flex; gap: 20px;">
+                    <a href="#contact" class="nav-cta">Me Contacter</a>
+                    <a href="images/projects/CV%20de%20POENOU%20Chick%20Nettanel.pdf" target="_blank"
+                        class="nav-cta"
+                        style="background: transparent; border: 2px solid var(--primary); color: var(--primary);">Consulter
+                        mon CV</a>
+                </div>
+            </div>
+            <div class="hero-portrait-wrapper">
+                <!-- Background Glowing Circle -->
+                <div class="portrait-glitch-bg"></div>
+
+                <!-- Orbiting Dynamic Tags -->
+                <div class="tech-tag tag-1">
+                    <i data-lucide="cpu" style="width: 14px; height: 14px; color: var(--primary);"></i> CBS & ROBOT
+                </div>
+                <div class="tech-tag tag-2">
+                    <i data-lucide="activity" style="width: 14px; height: 14px; color: #fbbf24;"></i> ARCHICAD (3D)
+                </div>
+                <div class="tech-tag tag-3">
+                    <i data-lucide="layout" style="width: 14px; height: 14px; color: var(--primary);"></i> AUTOCAD (PLANS)
+                </div>
+
+                <!-- Main Portrait -->
+                <img src="images/ui/hero_engineer.png" alt="Chick POENOU Portrait">
+
+                <div class="orb orb-purple"
+                    style="width: 500px; height: 500px; filter: blur(120px); opacity: 0.3; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS STRIP -->
+    <section class="container" style="position: relative; z-index: 20;">
+        <div class="stats-strip"
+            style="border-radius: 40px; box-shadow: 0 20px 60px -20px rgba(0,0,0,0.1); transform: translateY(-50px);">
+            <div class="stat-item">
+                <h3>4+</h3>
+                <p>ANNÉES D'ÉTUDES</p>
+            </div>
+            <div class="stat-item">
+                <h3>12+</h3>
+                <p>PROJETS RÉALISÉS</p>
+            </div>
+            <div class="stat-item">
+                <h3>3</h3>
+                <p>STAGES PRÉ-PRO</p>
+            </div>
+            <div class="stat-item">
+                <h3>98%</h3>
+                <p>MAÎTRISE DES EUROCODES</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- QUOTE SECTION -->
+    <section class="container" style="padding: 50px 0 100px; text-align: center;">
+        <h2 class="title-font" style="font-size: 3.5rem; max-width: 900px; margin: 0 auto; line-height: 1.1;">
+            "J'aime résoudre des problèmes complexes avec des solutions <span style="color: var(--primary);">durables et
+                innovantes</span>. Ma passion ? Donner vie à la structure."
+        </h2>
+    </section>
+
+    <!-- EXPERTISE (Oppa Cards style) -->
+    <section id="services" class="container expertise-section">
+        <h2 class="title-font" style="font-size: 3rem; margin-bottom: 20px;">CE QUE JE PEUX <span
+                style="color: var(--primary);">FAIRE</span> POUR VOUS</h2>
+        <p style="color: var(--text-muted); font-family: 'Syne'; font-weight: 500; max-width: 600px;">
+            Une expertise technique transversale pour accompagner vos projets de construction de l'esquisse à la
+            réalisation.
+        </p>
+        <div class="expertise-grid">
+            <div class="expertise-card-oppa">
+                <div class="icon-box" style="background: rgba(168, 85, 247, 0.1);"><i data-lucide="building-2"
+                        style="color: var(--primary);"></i></div>
+                <h3>DIMENTIONNEMENT STRUCTUREL</h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem; font-family: 'Syne'; line-height: 1.6;">Études de
+                    structures Béton Armé et Charpente Métallique sous Eurocodes.</p>
+            </div>
+            <div class="expertise-card-oppa">
+                <div class="icon-box" style="background: rgba(249, 115, 22, 0.1);"><i data-lucide="layout"
+                        style="color: #f97316;"></i></div>
+                <h3>MODÉLISATION BIM</h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem; font-family: 'Syne'; line-height: 1.6;">
+                    Conception de maquettes numériques collaboratives sur Revit et Tekla.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS SECTION (Dark Oppa style) -->
+    <section id="skills" class="container">
+        <div class="skills-oppa-container">
+            <div class="orb orb-purple" style="top: -200px; left: -200px; width: 600px; height: 600px; opacity: 0.2;">
+            </div>
+            <div style="text-align: center; margin-bottom: 80px; position: relative; z-index: 5;">
+                <h2 class="title-font" style="font-size: 4rem;">COMPÉTENCES PROFESSIONNELLES</h2>
+                <p style="color: rgba(255,255,255,0.6); max-width: 600px; margin: 0 auto; margin-top: 20px;">Maîtrise
+                    avancée des outils de simulation et de conception de pointe.</p>
+            </div>
+
+            <div class="skills-grid" style="position: relative; z-index: 5;">
+                <div>
+                    <div class="skill-bar-wrapper">
+                        <div class="skill-label"><span>CBS & Robot (Modélisation & Ferraillage)</span> <span>95%</span></div>
+                        <div class="progress-bg"><div class="progress-fill" style="width: 95%;"></div></div>
+                    </div>
+                    <div class="skill-bar-wrapper">
+                        <div class="skill-label"><span>Autodesk Revit & ArchiCAD (3D)</span> <span>88%</span></div>
+                        <div class="progress-bg"><div class="progress-fill" style="width: 88%;"></div></div>
+                    </div>
+                    <div class="skill-bar-wrapper">
+                        <div class="skill-label"><span>AutoCAD (Plans, Coupes, Façades)</span> <span>92%</span></div>
+                        <div class="progress-bg"><div class="progress-fill" style="width: 92%;"></div></div>
+                    </div>
+                </div>
+                <div>
+                    <div class="skill-bar-wrapper">
+                        <div class="skill-label"><span>Eurocodes (EC1, EC2, EC3, EC7)</span> <span>98%</span></div>
+                        <div class="progress-bg"><div class="progress-fill" style="width: 98%;"></div></div>
+                    </div>
+                    <div class="skill-bar-wrapper">
+                        <div class="skill-label"><span>Dimensionnement Structurel Complex</span> <span>90%</span></div>
+                        <div class="progress-bg"><div class="progress-fill" style="width: 90%;"></div></div>
+                    </div>
+                    <div class="skill-bar-wrapper">
+                        <div class="skill-label"><span>Gestion de Projet / GTC</span> <span>85%</span></div>
+                        <div class="progress-bg"><div class="progress-fill" style="width: 85%;"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="container" style="padding: 100px 0;">
+        <h2 class="title-font" style="font-size: 3rem; margin-bottom: 20px;">SELECTION DE <span
+                style="color: var(--primary);">PROJETS</span></h2>
+        <p style="color: var(--text-muted); font-family: 'Syne'; margin-bottom: 60px;">Chaque projet est un défi unique
+            relevé avec rigueur technique.</p>
+
+        <!-- Projet 1 -->
+        <div class="project-card-oppa">
+            <div class="project-img-box">
+                <img src="images/projects/pont_direct.png" alt="Conception Pont Haubané">
+            </div>
+            <div class="project-info-box">
+                <p style="color: var(--primary); font-weight: 800; text-transform: uppercase; letter-spacing: 2px;">
+                    Ouvrage d'Art</p>
+                <h3 class="title-font" style="font-size: 3rem;">CONCEPTION PONT HAUBANÉ</h3>
+                <p style="color: var(--text-muted); line-height: 1.8; margin-bottom: 30px;">
+                    Étude complète du comportement dynamique et dimensionnement structurel d'un ouvrage d'art complexe.
+                </p>
+                <a href="#" class="nav-cta">Voir les détails</a>
+            </div>
+        </div>
+
+        <!-- Projet 2 -->
+        <div class="project-card-oppa">
+            <div class="project-img-box">
+                <img src="images/projects/tour_direct.jpg" alt="Tour R+12">
+            </div>
+            <div class="project-info-box">
+                <p style="color: var(--primary); font-weight: 800; text-transform: uppercase; letter-spacing: 2px;">
+                    Bâtiment</p>
+                <h3 class="title-font" style="font-size: 3rem;">TOUR R+12 ÉCO-LIVING</h3>
+                <p style="color: var(--text-muted); line-height: 1.8; margin-bottom: 30px;">
+                    Dimensionnement structurel d'un bâtiment multi-étagé avec optimisation énergétique et
+                    environnementale.
+                </p>
+                <a href="#" class="nav-cta">Voir les détails</a>
+            </div>
+        </div>
+
+        <!-- Projet 3 -->
+        <div class="project-card-oppa">
+            <div class="project-img-box">
+                <img src="images/projects/ferraillage_poutre_direct.jpg" alt="Ferraillage Poutre">
+            </div>
+            <div class="project-info-box">
+                <p style="color: var(--primary); font-weight: 800; text-transform: uppercase; letter-spacing: 2px;">
+                    Structure</p>
+                <h3 class="title-font" style="font-size: 3rem;">PLAN DE FERRAILLAGE RÉEL</h3>
+                <p style="color: var(--text-muted); line-height: 1.8; margin-bottom: 30px;">
+                    Réalisation détaillée des plans d'exécution de ferraillage de poutres sur Robot Structural Analysis.
+                </p>
+                <a href="#" class="nav-cta">Voir les détails</a>
+            </div>
+        </div>
+
+        <!-- Projet 4 -->
+        <div class="project-card-oppa">
+            <div class="project-img-box">
+                <img src="images/projects/ferraillage_semelle_direct.jpg" alt="Ferraillage Semelle">
+            </div>
+            <div class="project-info-box">
+                <p style="color: var(--primary); font-weight: 800; text-transform: uppercase; letter-spacing: 2px;">
+                    Fondations</p>
+                <h3 class="title-font" style="font-size: 3rem;">PLAN DE FERRAILLAGE SEMELLE</h3>
+                <p style="color: var(--text-muted); line-height: 1.8; margin-bottom: 30px;">
+                    Conception et dessin technique du ferraillage des semelles de fondation pour ouvrages complexes.
+                </p>
+                <a href="#" class="nav-cta">Voir les détails</a>
+            </div>
+        </div>
+
+        <!-- Projet 5 (Nouveau - Aperçu PDF) -->
+        <div class="project-card-oppa">
+            <div class="project-img-box blueprint-bg">
+                <i data-lucide="layout" style="width: 140px; height: 140px; color: var(--primary); opacity: 0.1; position: absolute; top: -20px; left: -20px;"></i>
+                <div style="text-align: center; z-index: 10;">
+                     <div style="background: rgba(168, 85, 247, 0.2); border: 2px solid var(--primary); padding: 15px 30px; border-radius: 12px; backdrop-filter: blur(5px);">
+                        <span class="title-font" style="font-size: 2.5rem; color: white; display: block; line-height: 0.9;">PLAN D'EXÉCUTION</span>
+                        <span style="font-size: 0.8rem; color: rgba(255,255,255,0.7); letter-spacing: 3px; font-weight: 800;">POUTRES & POTEAUX</span>
+                     </div>
+                </div>
+                <!-- Some decorative technical lines -->
+                <div style="position: absolute; width: 100%; height: 2px; background: rgba(255,255,255,0.1); top: 30%;"></div>
+                <div style="position: absolute; width: 100%; height: 2px; background: rgba(255,255,255,0.1); top: 70%;"></div>
+                <div style="position: absolute; height: 100%; width: 2px; background: rgba(255,255,255,0.1); left: 20%;"></div>
+            </div>
+            <div class="project-info-box">
+                <p style="color: var(--primary); font-weight: 800; text-transform: uppercase; letter-spacing: 2px;">
+                    Étude Structurale R+12</p>
+                <h3 class="title-font" style="font-size: 3rem;">FERRAILLAGE DE POTEAU</h3>
+                <p style="color: var(--text-muted); line-height: 1.8; margin-bottom: 30px;">
+                    Modélisation avancée et génération de plans d'armatures pour structures complexes en béton armé.
+                </p>
+                <a href="images/projects/ferraillage_poteau_direct.pdf" target="_blank" class="nav-cta" style="background: var(--primary); border: none;">CONSULTER L'APERÇU PDF</a>
+            </div>
+        </div>
+
+        <!-- Projet 5 (CV) -->
+        <div class="project-card-oppa" style="background: var(--dark-bg); color: white;">
+            <div class="project-info-box" style="width: 100%; text-align: center;">
+                <p style="color: var(--primary); font-weight: 800; text-transform: uppercase; letter-spacing: 2px;">
+                    Curriculum Vitae</p>
+                <h3 class="title-font" style="font-size: 3rem; color: white;">MON PARCOURS COMPLET</h3>
+                <p style="color: rgba(255,255,255,0.7); line-height: 1.8; margin-bottom: 30px;">
+                    Découvrez l'intégralité de mon expérience et de mes certifications en ligne.
+                </p>
+                <a href="images/projects/CV%20de%20POENOU%20Chick%20Nettanel.pdf" target="_blank"
+                    class="nav-cta" style="background: white; color: var(--dark-bg);">Consulter mon CV complet (PDF)</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA CONTACT SECTION (Oppa Style) -->
+    <section id="contact" class="container">
+        <div class="cta-oppa">
+            <div class="orb orb-purple"></div>
+            <div class="orb orb-yellow" style="bottom: -100px; right: -50px; opacity: 0.2;"></div>
+
+            <div
+                style="display: flex; justify-content: space-between; align-items: center; position: relative; z-index: 5;">
+                <div style="width: 60%;">
+                    <h2 class="title-font" style="font-size: 4rem; line-height: 1;">VOUS AVEZ UN PROJET <br> EN TÊTE ?
+                    </h2>
+                    <p style="margin: 30px 0; color: rgba(255,255,255,0.7); font-size: 1.2rem;">Travaillons ensemble
+                        pour concevoir des structures exceptionnelles.</p>
+                    <div style="display: flex; gap: 20px;">
+                        <a href="mailto:contact@chick-poenou.fr" class="nav-cta">Parlons-en !</a>
+                        <a href="images/projects/CV%20de%20POENOU%20Chick%20Nettanel.pdf" target="_blank"
+                            class="nav-cta"
+                            style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px);">CONSULTER MON CV (PDF)</a>
+                    </div>
+                </div>
+                <!-- Small portrait like in the CTA reference -->
+                <div
+                    style="width: 250px; height: 350px; background: rgba(255,255,255,0.1); border-radius: 40px; overflow: hidden; display: flex; align-items: flex-end;">
+                    <img src="images/ui/hero_engineer.png" alt="Chick POENOU Portrait"
+                        style="max-width: 100%; height: auto;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="oppa-footer">
+        <div class="container">
+            <a href="#" class="logo" style="font-size: 2.5rem; margin-bottom: 20px; display: block;">CP.ING</a>
+            <p style="color: rgba(255,255,255,0.5); max-width: 500px; margin: 0 auto 40px;">
+                Ingénieur de conception dédié à la solidité et l'innovation structurelle.
+            </p>
+            <div style="display: flex; gap: 30px; justify-content: center; margin-bottom: 40px;">
+                <a href="#" style="color: white;"><i data-lucide="linkedin"></i></a>
+                <a href="#" style="color: white;"><i data-lucide="twitter"></i></a>
+                <a href="#" style="color: white;"><i data-lucide="instagram"></i></a>
+            </div>
+            <p style="color: rgba(255,255,255,0.3); font-size: 0.8rem;">© 2026 Chick POENOU. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        // Simple scroll reveal for skill bars
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.querySelectorAll('.progress-fill').forEach(bar => {
+                        const width = bar.style.width;
+                        bar.style.width = '0';
+                        setTimeout(() => bar.style.width = width, 100);
+                    });
+                }
+            });
+        }, { threshold: 0.5 });
+
+        observer.observe(document.getElementById('skills'));
+    </script>
+</body>
+
+</html>
