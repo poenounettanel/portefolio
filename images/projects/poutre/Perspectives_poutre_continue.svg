@@ -1,6 +1,6 @@
-<svg width="1000" height="500" viewBox="0 0 1000 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="1000" height="500" viewBox="-50 -50 1100 600" fill="none" xmlns="http://www.w3.org/2000/svg">
   <!-- Background -->
-  <rect width="1000" height="500" fill="#f8fafc"/>
+  <rect width="1010" height="510" x="-10" y="-10" fill="#f8fafc"/>
   
   <!-- Engineering Grid -->
   <g stroke="#e2e8f0" stroke-width="1">
