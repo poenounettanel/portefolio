@@ -1,6 +1,6 @@
-<svg width="1000" height="500" viewBox="-100 -50 1200 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="1000" height="500" viewBox="-100 -50 1100 550" fill="none" xmlns="http://www.w3.org/2000/svg">
   <!-- Background -->
-  <rect width="1200" height="600" x="-100" y="-50" fill="#f8fafc"/>
+  <rect width="1200" height="600" x="-100" y="-100" fill="#f8fafc"/>
   
   <!-- Engineering Grid -->
   <g stroke="#e2e8f0" stroke-width="1">
@@ -9,8 +9,8 @@
   </g>
 
   <!-- Title -->
-  <text x="40" y="30" font-family="Syne, sans-serif" font-size="22" font-weight="800" fill="#1e293b">PERSPECTIVE TECHNIQUE : POUTRE CONTINUE (27x50)</text>
-  <text x="40" y="55" font-family="Syne, sans-serif" font-size="12" font-weight="600" fill="#64748b" text-transform="uppercase">Note de calcul : Poutre1 | Portées réelles : 5.50m - 4.20m - 1.50m</text>
+  <text x="40" y="20" font-family="Syne, sans-serif" font-size="22" font-weight="800" fill="#1e293b">ÉPURE TECHNIQUE : PROPORTIONS RÉELLES (27x50)</text>
+  <text x="40" y="45" font-family="Syne, sans-serif" font-size="12" font-weight="600" fill="#64748b" text-transform="uppercase">Visualisation Proportionnelle : Hauteur h > Largeur b</text>
 
   <!-- Markers for arrows -->
   <defs>
@@ -22,61 +22,66 @@
     </marker>
   </defs>
 
+  <!-- Proportional Beam Dimensions -->
+  <!-- Let 1cm = 2px visually for b and h -->
+  <!-- h = 50cm * 2 = 100px height. Base y=300 to y=200 -->
+  <!-- b = 27cm * 2 = 54px depth. Let's use 30px offset in x and y for perspective (sqrt(30^2+30^2)=42px approx) -->
+
   <!-- 3D Beam Perspective Drawing -->
   <g stroke="#334155" stroke-width="2">
-    <!-- Top Face (Perspective) -->
-    <path d="M100 200 L150 150 L950 150 L900 200 Z" fill="#cbd5e1" />
-    <!-- End Right Face -->
-    <path d="M900 200 L950 150 L950 200 L900 250 Z" fill="#b9cbdc" />
-    <!-- Front Face -->
-    <rect x="100" y="200" width="800" height="50" fill="#e2e8f0" />
-    <!-- Span separators (indicative) -->
-    <line x1="492" y1="200" x2="492" y2="250" stroke="#94a3b8" stroke-width="1" stroke-dasharray="2,2" />
-    <line x1="792" y1="200" x2="792" y2="250" stroke="#94a3b8" stroke-width="1" stroke-dasharray="2,2" />
+    <!-- Top Face -->
+    <!-- Offset: (100, 200) -> (130, 170) (~42px depth for b=27cm) -->
+    <path d="M100 200 L130 170 L930 170 L900 200 Z" fill="#cbd5e1" />
+    
+    <!-- End Face -->
+    <path d="M900 200 L930 170 L930 270 L900 300 Z" fill="#b9cbdc" />
+    
+    <!-- Front Face (h = 100px representing 50cm) -->
+    <rect x="100" y="200" width="800" height="100" fill="#e2e8f0" />
+    
+    <!-- Separators -->
+    <line x1="492" y1="200" x2="492" y2="300" stroke="#94a3b8" stroke-width="1" stroke-dasharray="2,2" />
+    <line x1="792" y1="200" x2="792" y2="300" stroke="#94a3b8" stroke-width="1" stroke-dasharray="2,2" />
   </g>
 
-  <!-- Supports (Appuis) -->
+  <!-- Supports -->
   <g fill="#1e293b">
-    <path d="M100 250 L120 280 H80 Z" />
-    <path d="M492 250 L512 280 H472 Z" />
-    <path d="M792 250 L812 280 H772 Z" />
+    <path d="M100 300 L120 330 H80 Z" />
+    <path d="M492 300 L512 330 H472 Z" />
+    <path d="M792 300 L812 330 H772 Z" />
   </g>
 
-  <!-- COTATIONS (Dimensions) -->
-  <!-- Hauteur h = 50 cm (on the left side) -->
-  <g stroke="#1e293b" stroke-width="1.2">
-    <path d="M40 200 H60 M40 250 H60" />
-    <path d="M50 200 V250" marker-start="url(#arrow-start)" marker-end="url(#arrow-end)" />
+  <!-- COTATIONS (Proportionnelles) -->
+  <g stroke="#1e293b" stroke-width="1.5">
+    <!-- h = 50 cm (Vertical face - visibly tall) -->
+    <path d="M40 200 H70 M40 300 H70" />
+    <path d="M55 200 V300" marker-start="url(#arrow-start)" marker-end="url(#arrow-end)" />
     
-    <!-- Largeur b = 27 cm (on the top perspective edge) -->
-    <path d="M80 200 L110 170 M130 150 L160 120" /> <!-- Guidelines -->
-    <path d="M100 200 L140 160" marker-start="url(#arrow-start)" marker-end="url(#arrow-end)" />
+    <!-- b = 27 cm (Top edge - visibly smaller) -->
+    <path d="M85 200 L115 170" /> <!-- guideline 1 -->
+    <path d="M115 170 L145 140" /> <!-- guideline 2 -->
+    <path d="M100 200 L130 170" marker-start="url(#arrow-start)" marker-end="url(#arrow-end)" />
 
-    <!-- Longueurs L1, L2, L3 -->
-    <path d="M100 310 V340 M492 310 V340 M792 310 V340 M900 310 V340" />
-    <path d="M100 325 H492" marker-start="url(#arrow-start)" marker-end="url(#arrow-end)" />
-    <path d="M492 325 H792" marker-start="url(#arrow-start)" marker-end="url(#arrow-end)" />
-    <path d="M792 325 H900" marker-start="url(#arrow-start)" marker-end="url(#arrow-end)" />
+    <!-- L1, L2, L3 Lengths -->
+    <path d="M100 360 V390 M492 360 V390 M792 360 V390 M900 360 V390" />
+    <path d="M100 375 H492" marker-start="url(#arrow-start)" marker-end="url(#arrow-end)" />
+    <path d="M492 375 H792" marker-start="url(#arrow-start)" marker-end="url(#arrow-end)" />
+    <path d="M792 375 H900" marker-start="url(#arrow-start)" marker-end="url(#arrow-end)" />
   </g>
 
-  <!-- Labels Text -->
+  <!-- Dimensions Text -->
   <g font-family="Syne, sans-serif" font-weight="700" font-size="14" fill="#1e293b">
-    <!-- Height -->
-    <text x="35" y="225" text-anchor="end" font-size="12">h = 50 cm</text>
-    <!-- Width -->
-    <text x="120" y="165" transform="rotate(-45 120 165)" text-anchor="start" font-size="12">b = 27 cm</text>
+    <text x="45" y="255" text-anchor="end" font-size="14">h = 50 cm</text>
+    <text x="110" y="175" transform="rotate(-45 110 175)" text-anchor="start" font-size="13">b = 27 cm</text>
     
-    <!-- Span Lengths -->
-    <text x="296" y="345" text-anchor="middle">L1 = 5.50 m</text>
-    <text x="642" y="345" text-anchor="middle">L2 = 4.20 m</text>
-    <text x="846" y="345" text-anchor="middle">L3 = 1.50 m</text>
+    <text x="296" y="395" text-anchor="middle">L1 = 5.50 m</text>
+    <text x="642" y="395" text-anchor="middle">L2 = 4.20 m</text>
+    <text x="846" y="395" text-anchor="middle">L3 = 1.50 m</text>
   </g>
 
-  <!-- Technical Overlay (Appuis) -->
-  <g font-family="Syne, sans-serif" font-size="10" fill="#9333ea" font-weight="600">
-    <text x="100" y="190">APPUI G.</text>
-    <text x="492" y="190" text-anchor="middle">APPUI C.</text>
-    <text x="792" y="190" text-anchor="middle">APPUI D.</text>
-    <text x="900" y="270" text-anchor="end">CONSOLE (1.50m)</text>
+  <!-- Technical Marks -->
+  <g font-family="Syne, sans-serif" font-size="11" fill="#9333ea" font-weight="600">
+    <text x="500" y="150" text-anchor="middle">MODÈLE ÉLÉMENT FINI : POUTRE CONTINUE</text>
+    <text x="910" y="330" text-anchor="end">CONSOLE D (1,50 M)</text>
   </g>
 </svg>
