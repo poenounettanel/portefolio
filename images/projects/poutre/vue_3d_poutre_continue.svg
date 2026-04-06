@@ -1,0 +1,96 @@
+<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Gradient for Metallic Rebars -->
+  <defs>
+    <linearGradient id="rebarGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#94a3b8;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#cbd5e1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#64748b;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="concreteGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f1f5f9;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#e2e8f0;stop-opacity:0.6" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background Grid -->
+  <rect width="800" height="400" fill="#0f172a" rx="20"/>
+  <path d="M0 50 L800 50 M0 100 L800 100 M0 150 L800 150 M0 200 L800 200 M0 250 L800 250 M0 300 L800 300 M0 350 L800 350" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+  <path d="M50 0 L50 400 M100 0 L100 400 M150 0 L150 400 M200 0 L200 400 M250 0 L250 400 M300 0 L300 400 M350 0 L350 400 M400 0 L400 400 M450 0 L450 400 M500 0 L500 400 M550 0 L550 400 M600 0 L600 400 M650 0 L650 400 M700 0 L700 400 M750 0 L750 400" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+
+  <!-- Isometric Projection Help -->
+  <g transform="translate(50, 250) skewY(-15)">
+    
+    <!-- Spans: 5.5m (x50) = 275px, 4.2m (x50) = 210px, 1.5m (x50) = 75px. Total = 560px -->
+    <!-- Concrete Beam (Transparent) -->
+    <rect x="0" y="-50" width="560" height="50" fill="url(#concreteGrad)" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+    
+    <!-- Rebars (Cage) -->
+    <!-- Bottom Reinforcement -->
+    <line x1="5" y1="-5" x2="555" y2="-5" stroke="#f97316" stroke-width="3" stroke-linecap="round"/>
+    <line x1="5" y1="-10" x2="555" y2="-10" stroke="#f97316" stroke-width="3" stroke-linecap="round"/>
+    
+    <!-- Top Reinforcement (Chapeaux/Montage) -->
+    <line x1="5" y1="-40" x2="555" y2="-40" stroke="#a855f7" stroke-width="2" stroke-linecap="round"/>
+    <line x1="5" y1="-45" x2="555" y2="-45" stroke="#a855f7" stroke-width="2" stroke-linecap="round"/>
+    
+    <!-- Chapeaux (Localized top bars over V2 and V3) -->
+    <!-- V1 at 0, V2 at 275, V3 at 485, End at 560 -->
+    <line x1="220" y1="-47" x2="330" y2="-47" stroke="#fbbf24" stroke-width="4" stroke-linecap="round"/> <!-- Over V2 -->
+    <line x1="430" y1="-47" x2="540" y2="-47" stroke="#fbbf24" stroke-width="4" stroke-linecap="round"/> <!-- Over V3 -->
+
+    <!-- Stirrups (Every 20px) -->
+    <g stroke="rgba(255,255,255,0.3)" stroke-width="1">
+        <rect x="20" y="-48" width="2" height="46" opacity="0.5"/>
+        <rect x="40" y="-48" width="2" height="46" opacity="0.5"/>
+        <rect x="60" y="-48" width="2" height="46" opacity="0.5"/>
+        <rect x="80" y="-48" width="2" height="46" opacity="0.5"/>
+        <rect x="100" y="-48" width="2" height="46" opacity="0.5"/>
+        <rect x="120" y="-48" width="2" height="46" opacity="0.5"/>
+        <rect x="140" y="-48" width="2" height="46" opacity="0.5"/>
+        <rect x="160" y="-48" width="2" height="46" opacity="0.5"/>
+        <rect x="180" y="-48" width="2" height="46" opacity="0.5"/>
+        <rect x="200" y="-48" width="2" height="46" opacity="0.5"/>
+        <rect x="220" y="-48" width="2" height="46" opacity="0.8"/> <!-- V2 Close spacing -->
+        <rect x="235" y="-48" width="2" height="46" opacity="0.8"/>
+        <rect x="250" y="-48" width="2" height="46" opacity="0.8"/>
+        <rect x="265" y="-48" width="2" height="46" opacity="0.8"/>
+        <rect x="280" y="-48" width="2" height="46" opacity="0.8"/>
+        <rect x="300" y="-48" width="2" height="46" opacity="0.5"/>
+        <rect x="320" y="-48" width="2" height="46" opacity="0.5"/>
+        <rect x="340" y="-48" width="2" height="46" opacity="0.5"/>
+        <rect x="360" y="-48" width="2" height="46" opacity="0.5"/>
+        <rect x="380" y="-48" width="2" height="46" opacity="0.5"/>
+        <rect x="400" y="-48" width="2" height="46" opacity="0.5"/>
+        <rect x="420" y="-48" width="2" height="46" opacity="0.5"/>
+        <rect x="440" y="-48" width="2" height="46" opacity="0.5"/>
+        <rect x="460" y="-48" width="2" height="46" opacity="0.5"/>
+        <rect x="480" y="-48" width="2" height="46" opacity="0.8"/> <!-- V3 -->
+        <rect x="495" y="-48" width="2" height="46" opacity="0.8"/>
+        <rect x="510" y="-48" width="2" height="46" opacity="0.8"/>
+        <rect x="525" y="-48" width="2" height="46" opacity="0.8"/>
+        <rect x="540" y="-48" width="2" height="46" opacity="0.8"/>
+    </g>
+
+    <!-- Support Annotations -->
+    <text x="0" y="20" fill="white" font-family="Syne" font-size="12" font-weight="800">API V1</text>
+    <text x="275" y="20" fill="white" font-family="Syne" font-size="12" font-weight="800">API V2</text>
+    <text x="485" y="20" fill="white" font-family="Syne" font-size="12" font-weight="800">API V3</text>
+    <text x="560" y="20" fill="white" font-family="Syne" font-size="12" font-weight="800">CONSOLE</text>
+  </g>
+
+  <!-- Technical Overlay Labels -->
+  <text x="400" y="40" fill="white" text-anchor="middle" font-family="Big Shoulders Display" font-size="24" letter-spacing="2">MODÉLISATION 3D POUTRE CONTINUE</text>
+  <text x="400" y="65" fill="#a855f7" text-anchor="middle" font-family="Syne" font-size="12" font-weight="800">SECTION 27x50 | L-TOTALE 11.20M</text>
+
+  <!-- Legend -->
+  <g transform="translate(50, 360)">
+    <rect width="10" height="10" fill="#f97316"/>
+    <text x="15" y="10" fill="rgba(255,255,255,0.7)" font-family="Syne" font-size="10">ACIER INFÉRIEUR (HA14/12)</text>
+    
+    <rect x="150" width="10" height="10" fill="#a855f7"/>
+    <text x="165" y="10" fill="rgba(255,255,255,0.7)" font-family="Syne" font-size="10">ACIER DE MONTAGE (HA8)</text>
+
+    <rect x="300" width="10" height="10" fill="#fbbf24"/>
+    <text x="315" y="10" fill="rgba(255,255,255,0.7)" font-family="Syne" font-size="10">CHAPEAUX (ACIER SUP.)</text>
+  </g>
+</svg>
